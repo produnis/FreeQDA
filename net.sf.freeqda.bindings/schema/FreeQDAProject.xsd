@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://sf.net.freeqda/FQDAProject" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" xmlns:fp="http://sf.net.freeqda/FQDAProject">
+
+    <xsd:complexType name="TextCategoryType">
+    	<xsd:sequence>
+    		<xsd:element name="Name" type="xsd:string"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="ID" type="xsd:ID" use="required"></xsd:attribute>
+    	<xsd:attribute name="ParentID" type="xsd:IDREF"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="TextCategoryListType">
+    	<xsd:sequence>
+    		<xsd:element name="TextCategory" type="fp:TextCategoryType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+
+
+
+    <xsd:complexType name="TextType">
+    	<xsd:sequence>
+    		<xsd:element name="Name" type="xsd:string"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="ID" type="xsd:ID" use="required"></xsd:attribute>
+    	<xsd:attribute name="CategoryID" type="xsd:IDREF"></xsd:attribute>
+    	<xsd:attribute name="Activated" type="xsd:boolean"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="TextListType">
+    	<xsd:sequence>
+    		<xsd:element name="Text" type="fp:TextType"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+
+
+<!-- 
+    <xsd:simpleType name="HexRGBColorType">
+    	<xsd:restriction base="xsd:string">
+    		<xsd:pattern value="^#([0-9a-f]{1,2}){3}$"></xsd:pattern>
+    	</xsd:restriction>
+    </xsd:simpleType>
+ -->
+	<xsd:simpleType name="HexRGBColorType">
+		<xsd:restriction base="xsd:hexBinary">
+			<xsd:length value="3"/> <!-- 3 octets, RGB (ff0000) -->
+		</xsd:restriction>
+	</xsd:simpleType>
+
+    <xsd:complexType name="TagType">
+    	<xsd:sequence>
+    		<xsd:element name="Name" type="xsd:string"></xsd:element>
+    		<xsd:element name="HexRGBColor" type="fp:HexRGBColorType"></xsd:element>
+    	</xsd:sequence>
+    	<xsd:attribute name="ID" type="xsd:ID"></xsd:attribute>
+    	<xsd:attribute name="ParentID" type="xsd:IDREF"></xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:complexType name="TagListType">
+    	<xsd:sequence>
+    		<xsd:element name="Tag" type="fp:TagType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="FQDAProjectType">
+    	<xsd:sequence>
+    		<xsd:element name="Name" type="xsd:string"></xsd:element>
+    		<xsd:element name="TagList" type="fp:TagListType"></xsd:element>
+    		<xsd:element name="TextCategoryList"
+    			type="fp:TextCategoryListType">
+    		</xsd:element>
+    		<xsd:element name="TextList" type="fp:TextListType"></xsd:element>
+    		<xsd:element name="HighestTextUID" type="fp:HighestTextUIDType" maxOccurs="1" minOccurs="1"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+
+    <xsd:element name="FQDAProject" type="fp:FQDAProjectType"></xsd:element>
+
+    <xsd:simpleType name="HighestTextUIDType">
+    	<xsd:restriction base="xsd:int"></xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

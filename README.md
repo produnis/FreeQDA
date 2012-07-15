@@ -1,4 +1,0 @@
-FreeQDA
-=======
-
-FreeQDA

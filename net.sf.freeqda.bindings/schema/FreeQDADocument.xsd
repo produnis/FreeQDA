@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://freeqda.sf.net/FQDADocument"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:fd="http://freeqda.sf.net/FQDADocument" attributeFormDefault="qualified">
+
+
+	<complexType name="AppliedTagType">
+		<attribute name="ID" type="int"></attribute>
+	</complexType>
+
+	<complexType name="AppliedTagsListType">
+		<sequence>
+			<element name="Tag" type="fd:AppliedTagType" maxOccurs="unbounded" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+
+
+
+    
+
+
+	<complexType name="StyleRangeType">
+		<sequence>
+			<element name="Font" type="fd:FontType" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="TagList" type="fd:AppliedTagsListType"
+				maxOccurs="1" minOccurs="0">
+			</element>
+		</sequence>
+		<attribute name="Start" type="int"></attribute>
+		<attribute name="Length" type="int"></attribute>
+	</complexType>
+
+
+
+	<complexType name="FQDADocumentType">
+    	<sequence>
+    		<element name="TextContent" type="string"></element>
+    		<element name="StyleRange" type="fd:StyleRangeType" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+	</complexType>
+
+
+    <element name="FQDADocument" type="fd:FQDADocumentType"></element>
+
+    <complexType name="FontType">
+    	<attribute name="FontStyle" type="int"></attribute>
+    </complexType>
+
+</schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="FQDA Test" uid="test" id="net.sf.freeqda.freeqdatest" application="net.sf.freeqda.application" version="0.9.0" useFeatures="true" includeLaunchers="true">
+
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <splash
+      location="net.sf.freeqda" />
+   <launcher name="FreeQDA">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+
+   <vm>
+      <linux>org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</linux>
+   </vm>
+
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="net.sf.freeqda.feature" version="0.9.0"/>
+   </features>
+
+
+</product>
