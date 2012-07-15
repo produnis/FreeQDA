@@ -1,0 +1,18 @@
+\select@language {ngerman}
+\contentsline {chapter}{\IeC {\"U}ber FreeQDA}{i}{chapter*.1}
+\contentsline {chapter}{\numberline {1}Installation}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Projekte}{2}{chapter.2}
+\contentsline {section}{\numberline {2-1}Ein neues Projekt beginnen}{2}{section.2.1}
+\contentsline {section}{\numberline {2-2}Ein Projekt laden}{2}{section.2.2}
+\contentsline {chapter}{\numberline {3}Texte}{3}{chapter.3}
+\contentsline {section}{\numberline {3-1}Texte hinzuf\IeC {\"u}gen}{3}{section.3.1}
+\contentsline {section}{\numberline {3-2}Einen Text l\IeC {\"o}schen}{5}{section.3.2}
+\contentsline {section}{\numberline {3-3}Textkategorien}{5}{section.3.3}
+\contentsline {subsection}{\numberline {I}Einer Kategorie einen neuen Text hinzuf\IeC {\"u}gen}{5}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}Codes}{7}{chapter.4}
+\contentsline {section}{\numberline {4-1}Einen neuen Code erstellen}{7}{section.4.1}
+\contentsline {section}{\numberline {4-2}Einen Code unterhalb eines anderen Codes erstellen}{8}{section.4.2}
+\contentsline {section}{\numberline {4-3}Eine Textstelle taggen}{8}{section.4.3}
+\contentsline {section}{\numberline {4-4}\IeC {\"U}bersichten erstellen}{10}{section.4.4}
+\contentsline {chapter}{Abbildungsverzeichnis}{11}{chapter*.27}
+\contentsline {chapter}{Tabellenverzeichnis}{12}{chapter*.28}

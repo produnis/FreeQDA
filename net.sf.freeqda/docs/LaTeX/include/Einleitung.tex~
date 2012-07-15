@@ -1,0 +1,25 @@
+\chapter{Einleitung}
+
+Qualitative Forschung ist ein wesentlicher Bestandteil der internationalen Pflegeforschung,
+insbesondere, wenn es um die Erforschung gelebter Erfahrungen in Gesundheit und Krankheit von
+Individuen oder deren sozialem Umfeld geht \cite{lobiondo05}. Insbesondere im
+Zuge der Mixed Methods-Diskussion in der U.S.-amerikanischen Sozialforschung, die ebenfalls
+schon spürbare Auswirkungen auf den Bereich der Gesundheits- und Pflegeforschung hat, rücken
+qualitative und quantitative Forschungsmethoden noch näher in den gemeinsamen Fokus der
+Wissenschaftler und Forscher \cite{teddlie08}. Vor diesem Hintergrund zeichnen sich
+neue Herausforderungen im Bereich der computergestützten qualitativen Datenanalysesoftware
+(CAQDAS) ab \cite{kuckartz07}. So existieren bereits einige unterschiedliche Analyseprogramme,
+die sich auch für den Bereich der Pflegeforschung bewährt haben, jedoch liegt die Anwenderlogik
+derjenigen Fachdisziplin zugrunde, aus der sie heraus entwickelt wurde. Dies macht sich
+insbesondere in der praktischen Handhabung, der Logik, der Nachvollziehbarkeit und fehlender
+Programmeigenschaften bemerkbar \cite{lewins07, helfferich05}. Die bekannteste
+Software ist derzeit MaxQDA (\url{http://www.maxqda.de}), deren Einsatz kostenpflichtig (derzeit ca.
+1.000 Euro pro Arbeitsplatz) und auf das Betriebssystem Windows beschränkt ist. Die Lizenzkosten
+können gerade für Nachwuchswissenschaftler und/oder Studierende ein Hindernis darstellen,
+welches qualitative Forschungs- oder Qualifikationsarbeiten erschwert und/oder einschränkt. Dies
+gilt einerseits für Deutschland, aber auch für Pflegeforschung in strukturschwachen Ländern wie
+beispielsweise Litauen oder die Slowakei.
+Durch die kommerzielle Vermarktung ist der Quellcode der Software nicht einsehbar und kann 
+daher nicht erweitert, verändert oder auf persönliche, fachspezifische oder projektbezogene Anforderungen angepasst werden. 
+Dies trifft auch auf die von MaxQDA generierten Projektdateien zu, die einen Export des Arbeitsmaterials zur weiteren Nutzung 
+auf anderen Systemen ausschließen.

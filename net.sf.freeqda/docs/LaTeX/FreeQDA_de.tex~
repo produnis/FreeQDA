@@ -1,0 +1,114 @@
+\documentclass[a4paper,% DIN A4-Papier
+			12pt, 		% 12er Schrift
+			DIV=calc, 	% Seitenränder optimieren
+			oneside, 	% einseitiges "Buch"
+			headsepline, 	% Trennlinie unter dem Seitenkopf
+			ngerman, 	% deutscher Text
+			smallheadings, 	% kleinere Überschriften 
+			openany, 	% neue Kapitel fangen auf einer neuen freien Seite an
+			liststotoc, 	% Verzeichnisse kommen ins Inhaltsverzeichnis
+			bibtotoc]	% Literaturverzeichnis kommt ins Inhaltsverzeichnis
+			{scrbook} 	% KOMA-Klasse "Buch"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{/home/produnis/Dokumente/LaTeX/src/produnis-src}		% alle meine LaTeX-Befehle
+\usepackage{bbding}
+%\usepackage[numbers,round]{natbib}
+\setlength{\parindent}{0mm}
+
+%
+\pdfinfo{/Title FreeQDA - Manual}  % PDF-Info
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{/home/produnis/Dokumente/LaTeX/src/mintedSRC}
+\bibliographystyle{/home/produnis/Dokumente/LaTeX/src/bmc_article}	% verwendet den natbib-Literaturstyle
+%\bibliographystyle{alphadin}
+
+\shorthandoff{"}			% aus "A wird NICHT Ä!
+	
+%%%%%%%%%%%%%%%%%%%%%%  D E C K B L A T T
+%================================================
+\begin{titlepage}
+
+\begin{center}
+
+
+% Upper part of the page
+\textsc{\LARGE FreeQDA}\\[1.5cm]
+\includegraphics[width=0.25\textwidth]{img/freeQDA_FINAL_1024}\\[1cm]    
+
+
+
+\textsc{\Large Eine freie Software zur Analyse \\qualitativer Forschungsdaten}\\[0.5cm]
+
+
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries Anleitung}\\[0.4cm]
+
+\HRule \\[1.9cm]
+
+% Author and supervisor
+%\vfill
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{von}\\
+Jörg \textsc{große Schlarmann}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{und} \\
+Dirk \textsc{Kitscha}
+\end{flushright}
+\end{minipage}
+
+\vfill
+
+% Bottom of the page
+{\large Version vom \today}
+
+\end{center}
+
+\end{titlepage}
+
+%%%%%%%%%%%%%%  V O R S P A N N
+%------------------------------------------------------------
+\frontmatter  % dies leitet einführende Seiten ein. Die Seitenzahlen werden römisch angezeigt
+\include{include/AboutFreeQDA}
+%----
+\tableofcontents	% Inhaltsverzeichnis ausgeben
+
+%%%%%%%%%%%%%% H A U P T T E I L
+%-----------------------------------------------------------
+\mainmatter   % dies leitet den Haupttext ein. Die Seitenzahlen werden arabisch angezeigt
+\include{include/start}
+\include{include/installation}
+\include{include/projekt}
+\include{include/texte}
+\include{include/codes}
+%
+%
+%
+%-------------------------------------------------------------------
+%\bibliography{../freeqda_manual}
+\listoffigures		% beginnend mit dem Abbildungsverzeichnis
+\listoftables		%... und dem Tabellenverzeichnis
+%\listoflistings		% aus dem minted-Paket
+%\newpage
+%\printnomenclature	% Abkürzungsverzeichnis ausgeben
+%-------------------------
+\backmatter    % hiermit wird  der Nachspann eingeleitet. Seitenzahlen werden weiter fortgeführt
+%\appendix
+%\addcontentsline{toc}{chapter}{Anhang}
+% \input{includes/Linkliste}
+%\theendnotes
+%
+%---------------------
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%% end of file

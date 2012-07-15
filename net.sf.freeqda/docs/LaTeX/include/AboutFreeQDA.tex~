@@ -1,0 +1,23 @@
+\chapter{Über FreeQDA}
+FreeQDA ist ein freies open-source Softwareprojekt zur Analyse qualitativer Forschungsdaten.
+
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{p{30mm}p{40mm}|p{60mm}}
+%\textbf{trallala} & \textbf{juppida} \\
+\multirow{5}{30mm}{\includegraphics[width=25mm]{img/freeQDA_FINAL_1024}} & \textbf{Programmierung} & Dirk Kitscha	\\
+&\textbf{Konzept} & Jörg große Schlarmann	\\
+&\textbf{Beratung} & André Fringer		\\
+&\textbf{Homepage} & \url{http://freeqda.sf.net} \\
+&\textbf{Lizenz} & \href{http://www.gnu.org/licenses/gpl-2.0.html}{GPL 2.0}		\\
+\end{tabular}
+%\caption{Über FreeQDA}
+\label{tab:about}
+\end{table}
+\vfill
+FreeQDA ist freie Software und darf unter den Bedingungen der \href{http://www.gnu.org/licenses/gpl-2.0.html}{GPL 2.0} %
+frei verwendet, kopiert und weiterentwickelt werden.\\
+Die Entwicklung von FreeQDA wurde von der \textit{Deutschen Gesellschaft für Pflegewissenschaft e.V.}\footnote{\url{http://www.dg-pflegewissenschaft.de}} %
+(DGP) gefördert.
+\vfill

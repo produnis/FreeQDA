@@ -1,0 +1,167 @@
+%
+\documentclass[a4paper,% DIN A4-Papier
+			12pt, 		% 12er Schrift
+			DIV=calc, 	% Seitenränder optimieren
+			oneside, 	% einseitiges "Buch"
+			headsepline, 	% Trennlinie unter dem Seitenkopf
+			ngerman, 	% deutscher Text
+			smallheadings, 	% kleinere Überschriften 
+			openany, 	% neue Kapitel fangen auf einer neuen freien Seite an
+			liststotoc, 	% Verzeichnisse kommen ins Inhaltsverzeichnis
+			bibtotoc]	% Literaturverzeichnis kommt ins Inhaltsverzeichnis
+			{scrbook} 	% KOMA-Klasse "Buch"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{tocdepth}{3} 
+\usepackage[T1]{fontenc}		% Schriftverbesserung
+\KOMAoptions{DIV=last}			% Seitenränder neu berechnen (wegen fontec)
+\usepackage[ngerman]{babel}		% Deutscher Satzbau
+%\usepackage[babel,german=quotes]{csquotes} %Anführungszeichen
+%\usepackage[macce]{inputenc} 		% für Apple, damit die Umlaute funktionieren
+\usepackage[utf8]{inputenc} 		% für Linux/Unix, damit die Umlaute funktionieren
+%\usepackage[ansinew]{inputenc} 	% für Windoof, damit die Umlaute funktionieren
+\usepackage{scrpage2}			% zur Manipulation der Kopf und Fusszeilen
+\usepackage{makeidx}			% zum Erstellen und Indexen (Abkrzungsverzeichnis)
+	\makeindex
+\usepackage[pdftex]{graphicx}		% zum Einbinden von Grafiken und Bilddateien
+%
+\usepackage[intoc]{nomencl}		% Abkuerzungsverzeichnis (und ins Inhaltsverzeichnis aufnehmen)
+	\let\abk\nomenclature							% Befehl umbenennen in abk
+	\renewcommand{\nomname}{Abkürzungsverzeichnis}	% Deutsche Überschrift
+	\setlength{\nomlabelwidth}{.20\hsize}				% Punkte zw. Abkürzung und Erklärung
+	\renewcommand{\nomlabel}[1]{#1 \dotfill}				% Punkte zw. Abkürzung und Erklärung
+	\setlength{\nomitemsep}{-\parsep}					% Zeilenabstände verkleinern
+	\makenomenclature
+\usepackage[numbers]{natbib}		% BibTex-Style
+\usepackage{pdfpages} 			% zum Einbinden von PDF-Dateien
+\usepackage[vcentering,dvips]{geometry}		% Seitengröße definieren
+	\geometry{papersize={209.9mm,297mm},total={130mm,210mm}}
+\usepackage{color}			% um Text zu f�rben
+\usepackage{endnotes}		% Fu�- und Endnoten
+%\renewcommand{\thefigure}{\arabic{figure}}	% Bilddurchz�hlung ohne Kapitelnummer
+
+\newcommand{\lbef}[1]{\textsf {\textcolor{blue}{\textbackslash#1}}}		%LateX Befehle blau darstellen
+\newcommand{\lcom}[1]{\textsf {\textcolor{red}{\% #1}}}				% Kommentare rot darstellen
+\newcommand{\lklam}[1]{\textsf {\textcolor{green}{\{\textcolor{black}{#1}\textcolor{green}{\}}}}}				% geschweifte Klammern gr�n darstellen
+\usepackage{url}			% Weblinks
+\usepackage{hyperref}		% unterteilt den Text innerhalb der PDF-Datei in klickbare Kapitel und setzt Link-Fraben
+	\definecolor{darkblue}{rgb}{0,0,.5}
+	\hypersetup{pdftex=true, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, pagecolor=darkblue, urlcolor=darkblue, citecolor=darkblue}
+\usepackage{caption}		% für z.B. Tabellenberschriften
+\usepackage{fancybox} 		% für Kasten und Boxen
+\usepackage{longtable}		% für lange Tabellen
+\usepackage{tabularx}		% für Tabellen
+\usepackage{eurosym}		% für das €-Symbol
+\usepackage{multirow}		% für mehrspaltige -zeilige Tabelleneinträge
+\usepackage{amsmath}		% mathematische Zeichen (Tilde ~)
+\usepackage{booktabs}		% für toprule /bottomrule /midrule
+%\usepackage{tocloft}			% für das Wort "Anhang" im TOC
+\renewcommand{\notesname}{Endnoten}
+%
+%
+%
+%
+%\newcolumntype{C}[1]{>{\begin{center} \bfseries}p{#1}<{\end{center}}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentrierte Tabellenspalte mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % RECHTS(!)bündige Tabellenspalte mit Breitenangabe 
+\newcommand{\ctab}{\centering\arraybackslash}		%Tabellenabschnitt zentrieren
+\newcommand{\rtab}{\raggedleft\arraybackslash}		%Tabellenabschnitt rechtsbündig
+\newcommand{\ltab}{\raggedright\arraybackslash}		%Tabellenabschnitt rechtsbündig
+%\newcommand*{\appendixmore}{% Das Wort Anhang wird ausgeschrieben
+%\renewcommand*{\chapterformat}{% 
+%\appendixname~\thechapter\autodot\enskip} 
+%\renewcommand*{\chaptermarkformat}{% 
+%\appendixname~\thechapter\autodot\enskip} 
+%} 
+\clubpenalty	= 10000% schliesst Schusterjungen aus
+\widowpenalty = 10000% schliesst Hurenkinder aus
+\pdfinfo{/Title FreeQDA - Handbuch}  % PDF-Info
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\bibliographystyle{produnis}		% verwendet den natbib-Literaturstyle
+\shorthandoff{"}					% aus "A wird NICHT Ä!
+	
+%%%%%%%%%%%%%%%%%%%%%%  D E C K B L A T T
+%================================================
+%\thanks{Doktorandenkolleg am Institut für Pflegewissenschaft}
+\subject{Handbuch}
+\title{FreeQDA}
+\author{{\normalsize Anleitung von} \\
+Jörg große Schlarmann \\
+}
+\date{\vspace*{\fill}{\normalsize Version 0.1.5 -- \today}}
+\maketitle
+
+
+\thispagestyle{scrheadings}	% hier bitte keine Seitenzahl
+\cofoot{}					% hier bitte keine Seitenzahl
+\rofoot{}					% hier bitte keine Seitenzahl
+\lofoot{}					% hier bitte keine Seitenzahl
+\begin{center}\bigskip
+\vspace{10 cm}
+\fbox{
+	\parbox{8cm}{%
+		\begin{center}
+		\Large FreeQDA\\
+		\small Die freie Software zur Analyse\\ qualitativer Forschungsdaten\\
+		\url{http://freeqda.sf.net}
+		\end{center}
+	}
+}\\
+	\vspace*{\fill}
+	\dictum[Stanislaw Jerzy Lec]{Vieles hätte ich verstanden, wenn man es mir nicht erklärt hätte}
+\end{center}
+
+
+
+
+%%%%%%%%%%%%%%  V O R S P A N N
+%------------------------------------------------------------
+\frontmatter  % dies leitet einführende Seiten ein. Die Seitenzahlen werden römisch angezeigt
+
+
+\tableofcontents		% Inhaltsverzeichnis ausgeben
+\listoffigures			% beginnend mit dem Abbildungsverzeichnis
+\listoftables			%... und dem Tabellenverzeichnis
+
+\newpage
+\printnomenclature	% Abkürzungsverzeichnis ausgeben
+
+
+
+
+%%%%%%%%%%%%%% H A U P T T E I L
+%-----------------------------------------------------------
+\mainmatter   % dies leitet den Haupttext ein. Die Seitenzahlen werden arabisch angezeigt
+%\KOMAoptions{chapterprefix} % Kapitelnamen werden ausgeschrieben
+%\include{include/Einleitung}
+
+
+%\bibliography{/Users/produnis/Documents/Programme/BibTEX/diss.mit.Latex.bib}
+\backmatter    % hiermit wird  der Nachspann eingeleitet. Seitenzahlen werden weiter fortgef�hrt
+\end{document}
+
+
+
+
+
+
+
+
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+%
+%%%%% end of file

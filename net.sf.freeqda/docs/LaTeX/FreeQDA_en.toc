@@ -1,0 +1,5 @@
+\select@language {english}
+\contentsline {chapter}{Bibliography}{1}{chapter*.3}
+\contentsline {chapter}{List of Figures}{2}{chapter*.4}
+\contentsline {chapter}{List of Tables}{3}{chapter*.5}
+\contentsline {chapter}{Quellcodeverzeichnis}{4}{chapter*.6}
