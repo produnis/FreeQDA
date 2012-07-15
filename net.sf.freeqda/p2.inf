@@ -1,0 +1,3 @@
+instructions.configure=\
+  addRepository(type:0,location:http${#58}//www.produnis.de/fqda/update);\
+  addRepository(type:1,location:http${#58}//www.produnis.de/fqda/update);

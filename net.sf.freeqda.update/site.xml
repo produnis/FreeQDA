@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="FreeQDA Update" url="http://www.produnis.de/fqda/update">
+      FreeQDA is a software for professional qualitative research data analysis, such as interviews, manuscripts, journal articles, memos and field notes.
+   </description>
+   <feature url="features/net.sf.freeqda.feature_0.9.1.jar" id="net.sf.freeqda.feature" version="0.9.1" os="linux,win32" ws="gtk,win32" arch="ia64,ia64_32,x86,x86_64"/>
+</site>

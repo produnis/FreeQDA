@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FreeQDA Bindings
+Bundle-SymbolicName: net.sf.freeqda.bindings;singleton:=true
+Bundle-Version: 0.9.1.qualifier
+Bundle-Activator: net.sf.freeqda.bindings.Activator
+Bundle-Vendor: net.sf.freeqda
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.freeqda.bindings.document,
+ net.sf.freeqda.bindings.project
